@@ -54,7 +54,12 @@ ROOT_URLCONF = 'FreshWheels.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'UserAuth/templates',
+            BASE_DIR / 'Customer/templates',
+            BASE_DIR / 'Driver/templates',
+            BASE_DIR / 'Farmer/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,6 +121,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static/',
+    BASE_DIR / 'UserAuth/static/',
+    BASE_DIR / 'Driver/static/',
+    BASE_DIR / 'Customer/static/',
+    BASE_DIR / 'Farmer/static/',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
