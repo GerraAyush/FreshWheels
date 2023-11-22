@@ -6,4 +6,4 @@ def get_home_page(httpRequest):
     return render(httpRequest, 'homePage.html', {})
 
 def get_login(httpRequest):
-    return HttpResponse("Login")
+    return render(httpRequest, 'login.html', {})
