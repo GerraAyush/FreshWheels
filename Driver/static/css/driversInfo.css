@@ -1,154 +1,154 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --peru: #64bcf4;
-  --black: #1e5772;
-  --white: #fff;
-  --light-black: #666;
-  --light-white: #ccc;
-  --light-bg: #f5f5f5;
-  --dark-bg: #1e5772;
-  --border: 0.1rem solid #aaa;
-  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --peru: #64bcf4;
+    --black: #1e5772;
+    --white: #fff;
+    --light-black: #666;
+    --light-white: #ccc;
+    --light-bg: #f5f5f5;
+    --dark-bg: #1e5772;
+    --border: 0.1rem solid #aaa;
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 * {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  transition: all 0.4s cubic-bezier(0.43, 1.1, 0.62, 1.08);
-  text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.43, 1.1, 0.62, 1.08);
+    text-transform: capitalize;
 }
 
 html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  background: var(--peru);
-  scroll-padding-top: 6rem;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: var(--peru);
+    scroll-padding-top: 6rem;
 }
 
 section {
-  padding: 5rem 10%;
+    padding: 5rem 10%;
 }
 
 .heading {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 5rem;
-  color: #f8f7f7;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 5rem;
+    color: #f8f7f7;
 }
 
 .heading span {
-  font-size: 2.5rem;
-  color: var(--peru);
+    font-size: 2.5rem;
+    color: var(--peru);
 }
 
 .heading h3 {
-  font-size: 4.5rem;
-  color: var(--black);
+    font-size: 4.5rem;
+    color: var(--black);
 }
 
 .btn,
 .next_page {
-  margin-top: 1rem;
-  display: inline-block;
-  background: var(--peru);
-  color: var(--white);
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 1rem 3rem;
+    margin-top: 1rem;
+    display: inline-block;
+    background: var(--peru);
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
 }
 
 .next_page {
-  margin-left: 2rem;
+    margin-left: 2rem;
 }
 
 .btn:hover,
 .next_page:hover {
-  letter-spacing: 0.2rem;
+    letter-spacing: 0.2rem;
 }
 
 .order {
-  background: var(--peru);
+    background: var(--peru);
 }
 
 .order .heading span {
-  color: var(--white);
+    color: var(--white);
 }
 
 .order .heading h3 {
-  color: var(--white);
+    color: var(--white);
 }
 
 .order form {
-  padding: 2rem;
-  background: var(--white);
-  box-shadow: var(--box-shadow);
+    padding: 2rem;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
 }
 
 .order form .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .order form .box-container .box {
-  flex: 1 1 41rem;
+    flex: 1 1 41rem;
 }
 
 .order form .box-container .box .inputBox input,
 .order form .box-container .box .inputBox textarea {
-  width: 100%;
-  margin: 1rem 0;
-  padding: 1.2rem 1.4rem;
-  font-size: 1.7rem;
-  color: var(--light-black);
-  border: var(--border);
-  text-transform: none;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.7rem;
+    color: var(--light-black);
+    border: var(--border);
+    text-transform: none;
 }
 
 .order form .box-container .box .inputBox input::placeholder,
 .order form .box-container .box .inputBox textarea::placeholder {
-  text-transform: capitalize;
+    text-transform: capitalize;
 }
 
 .order form .box-container .box .inputBox input:focus,
 .order form .box-container .box .inputBox textarea:focus {
-  background: var(--black);
-  color: var(--white);
+    background: var(--black);
+    color: var(--white);
 }
 
 .order form .box-container .box .inputBox input:focus::placeholder,
 .order form .box-container .box .inputBox textarea:focus::placeholder {
-  color: var(--light-white);
+    color: var(--light-white);
 }
 
 .order form .box-container .box .inputBox textarea {
-  height: 20rem;
-  resize: none;
+    height: 20rem;
+    resize: none;
 }
 
 .order form .box-container .box .inputBox .map {
-  height: 20rem;
-  width: 100%;
-  margin: 1rem 0;
+    height: 20rem;
+    width: 100%;
+    margin: 1rem 0;
 }
 
 .order form .box-container .box .inputBox span {
-  color: var(--light-black);
-  font-size: 2rem;
+    color: var(--light-black);
+    font-size: 2rem;
 }
 
 legend {
-  font-weight: bold;
-  font-size: 3rem;
-  margin-bottom: 10px;
-  color: #666;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #666;
 }
 
 input[type="text"],
@@ -157,80 +157,80 @@ input[type="tel"],
 input[type="number"],
 select,
 textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #f6c7c7;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-  font-size: 16px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #f6c7c7;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
 
 button[type="submit"] {
-  background-color: #4ea8ec;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
+    background-color: #4ea8ec;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 button[type="submit"]:hover {
-  background-color: #4ea8ec;
+    background-color: #4ea8ec;
 }
 
 label input[type="checkbox"] {
-  display: inline-block;
-  margin-right: 5px;
+    display: inline-block;
+    margin-right: 5px;
 }
 
 ul {
-  margin: 0;
-  padding: 0 0 0 20px;
+    margin: 0;
+    padding: 0 0 0 20px;
 }
 
 li {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 input:required,
 select:required,
 textarea:required {
-  border-color: #ccc;
+    border-color: #ccc;
 }
 
 input:invalid,
 select:invalid,
 textarea:invalid {
-  border-color: rgb(90, 140, 239);
+    border-color: rgb(90, 140, 239);
 }
 
 @media (max-width: 800px) {
-  section {
-    padding: 3rem 5%;
-  }
-  .heading h3 {
-    font-size: 4rem;
-  }
-  html {
-    font-size: 57%;
-  }
+    section {
+        padding: 3rem 5%;
+    }
+    .heading h3 {
+        font-size: 4rem;
+    }
+    html {
+        font-size: 57%;
+    }
 }
 
 @media (max-width: 600px) {
-  html {
-    font-size: 50%;
-  }
-  section {
-    padding: 2rem 2%;
-  }
-  form {
-    border-radius: 10px;
-  }
+    html {
+        font-size: 50%;
+    }
+    section {
+        padding: 2rem 2%;
+    }
+    form {
+        border-radius: 10px;
+    }
 }

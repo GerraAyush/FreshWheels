@@ -10,7 +10,6 @@
     <title>Farmers Registration Page</title>
   </head>
 
-  {% block head %} {% endblock %} {% block body %}
   <body>
 
     <section class="order" id="order">
@@ -19,49 +18,49 @@
           <h3>Grow and earn with FreshWheels </h3>
        </div>
     
-       <form action="">
+       <form action="{% url 'Farmer:info' %}" method="POST">
+         {% csrf_token %}
           <div class="box-container">
              <div class="box">
                 <div class="inputBox">
-                   <span>full name</span>
-                   <input name="nameEditText" type="text" placeholder="Enter your name">
+                   <span>Full name</span>
+                   <input name="name" type="text" placeholder="Enter your name">
                 </div>
                 <div class="inputBox">
                    <span>About You</span>
-                   <textarea name="descriptionEditText" placeholder="Tell us something about yourself" id="" cols="30" rows="10"></textarea>
+                   <textarea name="description" placeholder="Tell us something about yourself" id="" cols="30" rows="10"></textarea>
                 </div>
                 <div class="inputBox">
                    <span>Upload your Photo</span>
-                   <input name="photoEditText" type="file">
+                   <input name="profile_img" type="file">
                 </div>
                 <div class="inputBox">
                     <span>Phone number</span> 
-                    <input name="phoneNumberEditText" type="tel" id="phone" name="phone" placeholder="Enter 10 digit phone number" >
+                    <input name="phone" type="tel" id="phone" name="phone" placeholder="Enter 10 digit phone number" >
                 </div>
              </div>
              <div class="box">
                 
                 <div class="inputBox">
                    <span>Farmers License number</span>
-                   <input name="licenseNumberEditText" type="text" placeholder="Enter your License number">
+                   <input name="license_number" type="text" placeholder="Enter your License number">
                 </div>
                 <div class="inputBox">
                    <span>address</span>
-                   <textarea name="addressEditText" placeholder="Enter your farm address : Place_City_State" id="" cols="30" rows="10"></textarea>
+                   <textarea name="address" placeholder="Enter your farm address : Place_City_State" id="" cols="30" rows="10"></textarea>
                 </div>
                 <div class="inputBox">
                     <span>district</span>
-                    <input name="districtEditText" type="text" placeholder="Enter your district">
+                    <input name="district" type="text" placeholder="Enter your district">
                 </div>
                 </div>
              </div>
           </div>
           <input name="Submit_btn" type="submit" value="Submit" class="btn">
-          {% comment %} <a href="farmer"> <span class="next_page">Next Page</span> </a> {% endcomment %}
+          {# <a href="farmer"> <span class="next_page">Next Page</span> </a> #}
        </form>
        
     </section>
     
   </body>
-  {% endblock %}
 </html>

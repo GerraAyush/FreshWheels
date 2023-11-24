@@ -3,5 +3,6 @@ from . import views
 
 app_name = "Driver"
 urlpatterns = [
-    path('driversInfo', views.get_driversInfo_page, name="driversInfo"),
+    path('info', views.get_driversInfo_page, name="info"),
+    path('profile', views.get_profile_page, name="profile"),
 ]

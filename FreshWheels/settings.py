@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'UserAuth.apps.AuthConfig',
+    'Farmer.apps.FarmerConfig',
+    'Driver.apps.DriverConfig',
+    'Customer.apps.CustomerConfig'
 ]
 
 MIDDLEWARE = [
@@ -55,10 +60,10 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'UserAuth/templates',
-            BASE_DIR / 'Customer/templates',
-            BASE_DIR / 'Driver/templates',
-            BASE_DIR / 'Farmer/templates',
+            os.path.join(BASE_DIR, 'UserAuth', 'templates'),
+            os.path.join(BASE_DIR, 'Customer', 'templates'),
+            os.path.join(BASE_DIR, 'Driver', 'templates'),
+            os.path.join(BASE_DIR, 'Farmer', 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -122,14 +127,21 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static/',
-    BASE_DIR / 'UserAuth/static/',
-    BASE_DIR / 'Driver/static/',
-    BASE_DIR / 'Customer/static/',
-    BASE_DIR / 'Farmer/static/',
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'UserAuth', 'static'),
+    os.path.join(BASE_DIR, 'Driver', 'static'),
+    os.path.join(BASE_DIR, 'Customer', 'static'),
+    os.path.join(BASE_DIR, 'Farmer', 'static'),
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'pictures')
+MEDIA_URL = '/pictures/'
+
+LOGIN_REDIRECT_URL = '/profile'
+LOGOUT_REDIRECT_URL = '/logout'
+LOGIN_URL = '/login'
